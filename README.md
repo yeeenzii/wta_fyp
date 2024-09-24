@@ -9,12 +9,22 @@ This project prototypes the use of CRNNs (LSTM and GRU) for the classification o
 # Steps to run the system:
 
 1. Change directories to 'backend' and run the commands
+   
         flask db migrate
         flask db upgrade
+   
     in order to ensure all the migrations to the database are up to date. 
 2. Run the app.py file
 3. Change directories to 'frontend' and start the webapp using the following command
+   
         npm start
+   
 4. No login credentials needed to access other pages, just click 'submit' on the login popup (leads to Client group of pages)
     a. To route to Researcher group of pages, replace 'client' with 'researcher' in the url
 5. Start the live detector by running Main(Live).py in the 'backend/classifier' folder
+
+# Fixes and Improvements
+The following are major improvements needed. It is not an exhaustive list of all bugs in the program.
+
+1. The login function currently is not working, along with its related routings and restrictions
+2. The dashboards currently only show an embedded map of a preset location. The ideal end product should have a heatmap showing the concentration of detections in different areas, or some version of a graphical display of detections.
